@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 const Home = ()=> {
     const { data: session } = useSession()
     const router = useRouter();
-    if (session) {
+    if (session.user.email === process.env.NEXT_PUBLIC_EMAIL ) {
         router.push('/dashboard')
     }
 
