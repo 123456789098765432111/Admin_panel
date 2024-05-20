@@ -10,7 +10,6 @@ const formatPrice = (price) => {
 
 
 export default function Dashboard() {
-  const [isLoading, setIsLoading] = useState(false);
   const { data: session } = useSession()
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
