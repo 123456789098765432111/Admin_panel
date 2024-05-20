@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 
 const Home = ()=> {
     const { data: session } = useSession()
-    const router = useRouter()
+    const router = useRouter();
     if (session) {
         router.push('/dashboard')
     }
