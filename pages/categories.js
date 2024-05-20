@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { useState } from "react";
 import toast from "react-hot-toast";
-
 export default function Categories() {
   const [name, setName] = useState('');
   const [categories, setCategories] = useState([]);

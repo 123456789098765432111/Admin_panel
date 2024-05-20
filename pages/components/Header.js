@@ -39,7 +39,7 @@ export default function Header() {
                   <li>
                     <Link
                       className={pathname === '/' ? active : inActive}
-                      href="/"
+                      href="/dashboard"
                     >
                       Dashboard
                     </Link>
