@@ -9,7 +9,7 @@ const formatPrice = (price) => {
 };
 
 
-export default function Home() {
+export default function Dashboard() {
   const [isLoading, setIsLoading] = useState(false);
   const { data: session } = useSession()
   const [products, setProducts] = useState([]);
@@ -21,7 +21,6 @@ export default function Home() {
 
   useEffect(() => {
     axios.get('/api/products').then(response => {
-
       setProducts(response.data);
     });
   }, []);
