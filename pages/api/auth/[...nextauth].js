@@ -10,5 +10,16 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_SECRET
     })
   ],
+  callbacks:{
+    async jwt({ token }) {
+      if (token.email === process.env.NEXT_PUBLIC_GITHUB) {
+        token.role = "admin";
+      } else {
+        token.role = "member";
+      }
+      return token;
+    },
+
+  },
   secret: process.env.NEXTAUTH_SECRET,
 })
