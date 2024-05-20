@@ -12,7 +12,7 @@ export default NextAuth({
   ],
   callbacks:{
     async jwt({ token }) {
-      if (token.email === process.env.NEXT_PUBLIC_GITHUB) {
+      if (token.email === process.env.NEXT_PUBLIC_EMAIL) {
         token.role = "admin";
       } else {
         token.role = "member";
