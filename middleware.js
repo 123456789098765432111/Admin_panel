@@ -22,6 +22,7 @@ export default withAuth(
 
 export const config = {
   matcher: [
+    "/",
     "/products",
     "/categories",
     "/orders",
