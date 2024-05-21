@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
+import Dashboard from "./dashboard";
 
 const Home = () => {
   const { data: session } = useSession();
@@ -8,7 +9,7 @@ const Home = () => {
   console.log(session);
   const router = useRouter();
   if (session?.user?.email === process.env.NEXT_PUBLIC_EMAIL) {
-    router.push("/dashboard");
+    return <Dashboard />;
   }
 
   return (
